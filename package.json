@@ -6,10 +6,13 @@
   "dependencies": {
     "express": "^4.17.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^26.6.0",
+    "nodemon": "^2.0.6"
+  },
   "scripts": {
-    "start": "node index.js",
-    "test": "npm t"
+    "start": "nodemon -L -e js,yml,sql index.js",
+    "test": "jest --verbose"
   },
   "author": "Gaurav Shrestha",
   "license": "MIT"

@@ -18,6 +18,13 @@
     "start": "nodemon -L -e js,yml,sql index.js",
     "test": "jest --verbose"
   },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "__test__"
+    ],
+    "testEnvironment": "node"
+  },
   "author": "Gaurav Shrestha",
   "license": "MIT"
 }

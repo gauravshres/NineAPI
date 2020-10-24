@@ -1,4 +1,5 @@
 const logger = require("./logger");
+const expressUtils = require("expressjs-utils");
 
 function filter(items = []) {
   try {
@@ -17,7 +18,9 @@ function filter(items = []) {
     logger.info(`Total Invalid Items : ${invalidItems.length}`);
     return { response };
   } catch (err) {
-    throw err;
+    throw expressUtils.httpError(400, {
+      error: `Could not decode request: JSON parsing failed`,
+    });
   }
 }
 

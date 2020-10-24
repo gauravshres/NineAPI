@@ -1,4 +1,6 @@
 const { filter } = require("../src/filter");
+let items = jest.fn();
+items.forEach = jest.fn();
 
 describe("returnFilterdContent", () => {
   it("should return required filterd content", () => {
@@ -26,6 +28,27 @@ describe("returnFilterdContent", () => {
         title: "The Taste",
         tvChannel: "GEM",
       },
+      {
+        drm: true,
+        episodeCount: 0,
+        image: {
+          showImage:
+            "http://mybeautifulcatchupservice.com/img/shows/TheTaste1280.jpg",
+        },
+        slug: "show/thetaste",
+        title: "The Taste",
+        tvChannel: "GEM",
+      },
+      {
+        drm: true,
+        episodeCount: 0,
+        image: {
+          showImage:
+            "http://mybeautifulcatchupservice.com/img/shows/TheTaste1280.jpg",
+        },
+        title: "The Taste",
+        tvChannel: "GEM",
+      },
     ]);
     expect(res).toEqual({
       response: [
@@ -36,6 +59,22 @@ describe("returnFilterdContent", () => {
           title: "16 Kids and Counting",
         },
       ],
+    });
+  });
+  it("should throw err if error filtering items", () => {
+    try {
+      filter({});
+    } catch (err) {
+      expect(err.statusCode).toBe(400);
+      expect(err.message).toBe(
+        '{"error":"Could not decode request: JSON parsing failed"}'
+      );
+    }
+  });
+  it("should return empty array if parameter is empty", () => {
+    const res = filter();
+    expect(res).toEqual({
+      response: [],
     });
   });
 });

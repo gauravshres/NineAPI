@@ -5,6 +5,7 @@ const logger = require("./src/logger");
 const helmet = require("helmet");
 const app = express();
 const PORT = process.env.PORT || 8080;
+const contentCleaner = require("./src/filter");
 
 app.use(helmet());
 app.use(compression());
@@ -20,7 +21,7 @@ app.use(express.json(), (err, req, res, next) => {
 app.get("/", (req, res, next) => {
   try {
     const payload = req.body.payload;
-    res.status(200).json("Alive");
+    res.json(contentCleaner.filter(payload));
   } catch (err) {
     next(err);
   }

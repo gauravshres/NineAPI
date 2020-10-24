@@ -1,6 +1,4 @@
 const { filter } = require("../src/filter");
-let items = jest.fn();
-items.forEach = jest.fn();
 
 describe("returnFilterdContent", () => {
   it("should return required filterd content", () => {

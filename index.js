@@ -17,6 +17,13 @@ app.use(express.json(), (err, req, res, next) => {
   }
   next(err);
 });
+app.get("/", (req, res, next) => {
+  try {
+    res.status(200).json("Nine Coding Challege.");
+  } catch (err) {
+    next(err);
+  }
+});
 
 app.post("/", (req, res, next) => {
   try {

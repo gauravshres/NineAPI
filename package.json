@@ -16,7 +16,8 @@
   },
   "scripts": {
     "start": "nodemon -L -e js,yml,sql index.js",
-    "test": "jest --verbose"
+    "test": "jest --verbose",
+    "test:cov": "rm -rf ./node_modules/.cache && rm -rf coverage/ && jest --coverage"
   },
   "jest": {
     "coveragePathIgnorePatterns": [

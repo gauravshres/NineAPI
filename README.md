@@ -52,16 +52,16 @@ npm t -- --watch
 To run a single test execute the following
 
 ```
-npm t -- -t 'filterContent.js'
+npm t filter.test.js
 ```
 
-Above will run tests for filterContent, you can be very specific too like below:
+Above will run tests for filter.js, you can be very specific too like below:
 
 ```
-npm t -- -t 'should throw err if param is empty'
+npm t -- -t 'should return empty array if parameter is empty'
 ```
 
-### Test coverage on the cll
+### Test coverage on the cli
 
 To see test coverage on the cli execute the following:
 

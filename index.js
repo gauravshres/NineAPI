@@ -18,7 +18,7 @@ app.use(express.json(), (err, req, res, next) => {
   next(err);
 });
 
-app.get("/", (req, res, next) => {
+app.post("/", (req, res, next) => {
   try {
     const payload = req.body.payload;
     res.json(contentCleaner.filter(payload));

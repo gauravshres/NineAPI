@@ -20,7 +20,7 @@ This is an application build on NodeJs that provides an API to filter that JSON 
 1. Jest: Uses Jest for testing
 2. Nodemon: Helps in automatically restarting the node.js application when any change is made in the project files.
 
-- Writen on Node with some ES6 syntax : tested on node v12.18.0
+- Written on Node with some ES6 syntax : tested on node v12.18.0
 
 ## How to run
 

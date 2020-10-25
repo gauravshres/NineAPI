@@ -1,4 +1,7 @@
 # Nine Code Challenge
+![Node.js CI](https://github.com/gauravshres/NineAPI/workflows/Node.js%20CI/badge.svg)
+<a href="https://codeclimate.com/github/gauravshres/NineAPI/test_coverage"><img src="https://api.codeclimate.com/v1/badges/eff1539c18ee45de6b6e/test_coverage" /></a>
+<a href="https://codeclimate.com/github/gauravshres/NineAPI/maintainability"><img src="https://api.codeclimate.com/v1/badges/eff1539c18ee45de6b6e/maintainability" /></a>
 
 This is an application build on NodeJs that provides an API to filter that JSON data and return few fields as response.
 

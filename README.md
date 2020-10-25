@@ -47,7 +47,7 @@ To watch tests run the following:
 npm t -- --watch
 ```
 
-### Running single test or with regex
+### Running single test
 
 To run a single test execute the following
 

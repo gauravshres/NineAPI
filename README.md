@@ -28,8 +28,8 @@ To run, you will need to know how to push and pull in GitHub and have nodemon in
 
 Then follow below steps:
 
-- clone the repo with git clone https://github.com/gauravshres/Nine.git
-- cd nine
+- clone the repo with git clone https://github.com/gauravshres/NineAPI.git
+- cd NineAPI
 - Execute `npm install`
 - To run the app `npm start` or `node index.js`
 
